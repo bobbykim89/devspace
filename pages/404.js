@@ -1,6 +1,6 @@
 import Link from 'next/dist/client/link';
 import Image from 'next/dist/client/image';
-import Layout from '../components/Layout';
+import Layout from '@/components/Layout';
 
 const NotFoundPage = () => {
   return (
