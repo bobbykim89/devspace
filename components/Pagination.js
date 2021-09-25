@@ -1,7 +1,4 @@
-/* eslint-disable */
-
 import Link from 'next/dist/client/link';
-import { v4 as uuidv4 } from 'uuid';
 
 const Pagination = ({ currentPage, numPages }) => {
   const isFirst = currentPage === 1;
