@@ -1,4 +1,7 @@
+/* eslint-disable */
+
 import Link from 'next/dist/client/link';
+import { v4 as uuidv4 } from 'uuid';
 
 const Pagination = ({ currentPage, numPages }) => {
   const isFirst = currentPage === 1;
@@ -13,7 +16,7 @@ const Pagination = ({ currentPage, numPages }) => {
         {!isFirst && (
           <Link href={prevPage}>
             <li
-              key={`${prevPage + 1000}`}
+              key={uuidv4()}
               className='relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:bg-gray-200 cursor-pointer'
             >
               Previous
@@ -24,7 +27,7 @@ const Pagination = ({ currentPage, numPages }) => {
           <Link href={`/blog/page/${i + 1}`}>
             <li
               className='relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:bg-gray-200 cursor-pointer'
-              key={`Page ${i + 1}`}
+              key={uuidv4()}
             >
               {i + 1}
             </li>
@@ -33,7 +36,7 @@ const Pagination = ({ currentPage, numPages }) => {
         {!isLast && (
           <Link href={nextPage}>
             <li
-              key={`${nextPage + 1000}`}
+              key={uuidv4()}
               className='relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:bg-gray-200 cursor-pointer'
             >
               Next
